@@ -10,22 +10,22 @@ stopBtn.addEventListener("click",stop);
 
 restartBtn.addEventListener("click", restart);
 
-function start(){
-    interval=setInterval(()=>{
+function start() {
+    interval = setInterval(() => {
         // seconds.textContent=seconds.textContent.toString().padStart(2,"0");
-        if(seconds.textContent > 0 && seconds.textContent < 60){
-            seconds.textContent--;          
+        if (seconds.textContent > 0 && seconds.textContent < 60) {
+            seconds.textContent--;
         }
-        else if(seconds.textContent == 0 && minutes.textContent != 0){
-            seconds.textContent=59; 
+        else if (seconds.textContent == 0 && minutes.textContent != 0) {
+            seconds.textContent = 59;
             minutes.textContent--;
         }
-            if(minutes.textContent == 0 && seconds.textContent <= 0){
-                seconds.textContent = 0;
-                completed();
-            }
-    },1000);
-    startBtn.setAttribute("disabled","disabled");
+        if (minutes.textContent == 0 && seconds.textContent <= 0) {
+            seconds.textContent = 0;
+            completed();
+        }
+    }, 1000);
+    startBtn.setAttribute("disabled", "disabled");
 }
 
 function stop(){

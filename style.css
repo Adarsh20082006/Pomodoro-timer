@@ -1,38 +1,46 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-body{
-    height:100vh;
+
+body {
+    height: 100vh;
     background-color: aliceblue;
     text-align: center;
     padding: 10%;
 }
-.container{
+
+.container {
     max-width: 600px;
     margin: 100px auto;
     background: rgba(255, 253, 253, 0.873);
     height: 50%;
-    padding:10px;
+    padding: 10px;
     border-radius: 10px;
     box-shadow: 0.01px 0.01px 10px rgb(131, 131, 131);
 }
-.timer-heading{
+
+.timer-heading {
     font-size: 50px;
     text-shadow: 2px 1px 2px rgb(141, 140, 140);
     margin-bottom: 50px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
-.timings{
+
+.timings {
     font-size: 50px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
-.buttons{
+
+.buttons {
     margin-top: 80px;
 }
-.timer-start,.timer-stop,.timer-reset{
-    color:rgb(235, 235, 235);
+
+.timer-start,
+.timer-stop,
+.timer-reset {
+    color: rgb(235, 235, 235);
     font-size: 20px;
     padding: 6px 12px;
     border-radius: 5px;
@@ -40,12 +48,15 @@ body{
     margin: 5px;
     cursor: pointer;
 }
-.timer-start{
+
+.timer-start {
     background-color: rgba(0, 0, 255, 0.816);
 }
-.timer-stop{
+
+.timer-stop {
     background-color: red;
 }
-.timer-reset{
+
+.timer-reset {
     background-color: gray
 }

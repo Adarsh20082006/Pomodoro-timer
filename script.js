@@ -28,7 +28,7 @@ function start() {
         }
         if (minutes.textContent == 0 && seconds.textContent <= 0) {
             seconds.textContent = 0;
-            completed();
+            completed(i);
         }
     }, 1000);
     startBtn.setAttribute("disabled", "disabled");
@@ -48,8 +48,10 @@ function restart() {
 }
 
 function completed() {
+    if (i != 0){
     setTimeout(() => (alert("Timer completed..!")), 1000);
     restart();
+    }
 }
 
 window.addEventListener('blur', stor(i));

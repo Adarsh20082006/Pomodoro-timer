@@ -47,8 +47,8 @@ function restart() {
     localStorage.clear()
 }
 
-function completed() {
-    if (i != 0){
+function completed(a) {
+    if (a != 0){
     setTimeout(() => (alert("Timer completed..!")), 1000);
     restart();
     }

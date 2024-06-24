@@ -5,8 +5,7 @@ let minutes = document.querySelector(".minutes");
 let seconds = document.querySelector(".seconds");
 let i = 0;
 
-minutes.textContent = localStorage.getItem("minutes");
-seconds.textContent = localStorage.getItem("seconds");
+
 
 startBtn.addEventListener("click", start);
 
@@ -16,6 +15,11 @@ restartBtn.addEventListener("click", restart);
 
 function start() {
     interval = setInterval(() => {
+        console.log(((minutes.textContent == 0) && (seconds.textContent <= 0)) )
+        if ((minutes.textContent == 0) && (seconds.textContent <= 0)) {
+            seconds.textContent = 0;
+            completed(i);
+        }
 
         if (seconds.textContent > 0 && seconds.textContent < 60) {
             // seconds.textContent--;
@@ -26,10 +30,7 @@ function start() {
             // minutes.textContent--;
             minutes.textContent = (minutes.textContent - 1).toString().padStart(2, "0");
         }
-        if (minutes.textContent == 0 && seconds.textContent <= 0) {
-            seconds.textContent = 0;
-            completed(i);
-        }
+        
     }, 1000);
     startBtn.setAttribute("disabled", "disabled");
 }
@@ -48,7 +49,7 @@ function restart() {
 }
 
 function completed(a) {
-    if (a != 0){
+    if (a !== 0){
     setTimeout(() => (alert("Timer completed..!")), 1000);
     restart();
     }
@@ -65,7 +66,7 @@ window.addEventListener('blur', stor(i));
 // // new Notification("Adarsh M M here..!",options);
 
 function stor(iterate) {
-    if (iterate == 0) {
+    if (iterate == 1) {
         start();
     }
     localStorage.setItem("minutes", minutes.textContent);
@@ -73,3 +74,5 @@ function stor(iterate) {
     i++;
 }
 
+minutes.textContent = localStorage.getItem("minutes");
+seconds.textContent = localStorage.getItem("seconds");

@@ -57,13 +57,13 @@ function completed(a) {
 
 window.addEventListener('blur', stor(i));
 
-// console.log(window.Notification.requestPermission);
-// window.addEventListener('load', Notification.requestPermission());
-// console.log((Notification.permission));
-// options={
-//     body:"Please enter your name",
-// }
-// // new Notification("Adarsh M M here..!",options);
+console.log(window.Notification.requestPermission);
+window.addEventListener('load', Notification.requestPermission());
+console.log((Notification.permission));
+options={
+    body:"Please enter your name",
+}
+new Notification("Adarsh M M here..!",options);
 
 function stor(iterate) {
     if (iterate == 1) {
